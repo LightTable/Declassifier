@@ -1,0 +1,5 @@
+{:name "Declassifier"
+ :author "Jamie Brandon"
+ :source "https://github.com/LightTable/LightTable-Declassifier"
+ :desc "Remove all traces of class on the fly"
+ :behaviors "declassifier.behaviors"}
