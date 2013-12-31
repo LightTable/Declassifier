@@ -15,12 +15,12 @@
 
 (defn declassify-near-cursor []
   (let [cm (editor/->cm-ed (pool/last-active))
-      cursor (.getCursor cm)
-      from #js {:line (- (.-line cursor) 10)}
-      to #js {:line (+ (.-line cursor) 10)}
-      classy-range (.getRange cm from to)
-      plain-range (declassify-string classy-range)]
-  (.replaceRange cm plain-range from to)))
+        cursor (.getCursor cm)
+        from #js {:line (.-line cursor) :ch 0}
+        classy-range (.getRange cm from cursor)
+        plain-range (declassify-string classy-range)]
+    (when (not= plain-range class-range)
+      (.replaceRange cm plain-range from cursor))))
 
 (behavior ::on-change
           :triggers #{:change}
