@@ -1,1 +1,2 @@
-{:+ {:app [(:lt.objs.plugins/load-js "declassifier_compiled.js" true)]}}
+{:+ {:app [(:lt.objs.plugins/load-js "declassifier_compiled.js" true)]
+     :editor [:lt.plugins.declassifier/on-change]}}

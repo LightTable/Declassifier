@@ -1,4 +1,8 @@
 (ns lt.plugins.declassifier
-  (:require [lt.objs.app]))
+  (:require-macros [lt.macros :refer [behavior]]))
 
-(js/alert "Class detected!")
+(behavior ::on-change
+          :triggers #{:change}
+          :desc "Declassifier: Trigger on change"
+          :reaction (fn [this]
+                      (js/alert "Class detected!")))
