@@ -25,6 +25,6 @@
 (behavior ::on-change
           :triggers #{:change}
           :desc "Declassifier: Trigger on change"
-          :debounce 100
+          :debounce 500
           :reaction (fn [this]
                       (declassify-near-cursor)))
