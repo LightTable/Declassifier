@@ -19,7 +19,7 @@
         from #js {:line (.-line cursor) :ch 0}
         classy-range (.getRange cm from cursor)
         plain-range (declassify-string classy-range)]
-    (when (not= plain-range class-range)
+    (when (not= plain-range classy-range)
       (.replaceRange cm plain-range from cursor))))
 
 (behavior ::on-change
