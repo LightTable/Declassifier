@@ -25,8 +25,7 @@
 
 (cmd/command {:command :declassify-behind-cursor
               :desc "Declassifier: replace classy words behind the cursor"
-              :exec (fn []
-                      (declassify-behind-cursor))})
+              :exec declassify-behind-cursor})
 
 (defn declassify-editor []
   (let [cm (editor/->cm-ed (pool/last-active))
@@ -38,5 +37,4 @@
 
 (cmd/command {:command :declassify-editor
               :desc "Declassifier: replace classy words in the current editor"
-              :exec (fn []
-                      (declassify-editor))})
+              :exec declassify-editor})
