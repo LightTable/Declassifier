@@ -1,6 +1,9 @@
 To build the plugin:
 
 * Clone the repo into your plugins folder
+  * On OS X: `~/Library/Application Support/LightTable/plugins/`
+  * On Linux: `~/.config/LightTable/plugins/`
+  * On Windows: `%APPDATALOCAL%/LightTable/plugins/`
 * Open [declassifier.cljs](https://github.com/LightTable/LightTable-Declassifier/blob/master/src/lt/plugins/declassifier.cljs)
 * Connect an nrepl client to the [project.clj](https://github.com/LightTable/LightTable-Declassifier/blob/master/project.clj)
 * Run the command `Editor: Build file or project` (you should see "Compiled plugin to ...declassifer_compiled.js" in the statusbar)
